@@ -1,0 +1,87 @@
+/* General styles */
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    text-align: center;
+  }
+  
+  /* Navbar styling */
+  .navbar {
+    background: #333;
+    color: white;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+  }
+  
+  .navbar ul li {
+    margin: 0 20px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.3s;
+  }
+  
+  .navbar ul li:hover,
+  .navbar ul li.active {
+    color: #ff9900;
+  }
+  
+  /* Container styling */
+  .container {
+    padding: 80px 20px 40px;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  /* Home Section */
+  .photo img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .photo img:hover {
+    transform: scale(1.1);
+  }
+  
+  /* About Me Section */
+  .about {
+    background: white;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Smooth section transitions */
+  .section {
+    opacity: 0;
+    transform: translateY(20px);
+    position: absolute;
+    width: 100%;
+  }
+  
+  .show {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  }
+  
+  .hide {
+    display: none;
+  }
+  

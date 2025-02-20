@@ -1,15 +1,20 @@
-import { useState } from 'react'
-import Hero from './Hero.jsx'
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Hero from "./Hero.jsx";
+import About from "./about/About.jsx";
+
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    
-<div className="components">
-  <Hero />
+    <Router>
+      <div className="components">
+      <Routes>
+  <Route path="/" element={<Hero />} /> {/* Home route */}
+  <Route path="/about" element={<About />} /> {/* About route */}
+</Routes>
 
-</div>
-  )
+      </div>
+    </Router>
+  );
 }
 
-export default App
+export default App;

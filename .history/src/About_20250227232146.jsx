@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import myPhoto from "./sayana.jpg";
-import "./About.css";
+import "./about/About.css";
 
 const About = () => {
   const [activeSection, setActiveSection] = useState("home");

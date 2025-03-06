@@ -1,0 +1,30 @@
+
+.hero-container {
+    padding: 100px 20px 40px;
+    text-align: center;
+    background: #f4f4f4;
+}
+
+.photo img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.photo img:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .hero-container {
+        padding: 80px 10px;
+    }
+
+    .photo img {
+        width: 150px;
+        height: 150px;
+    }
+}

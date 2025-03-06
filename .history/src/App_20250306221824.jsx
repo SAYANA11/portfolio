@@ -10,7 +10,7 @@ function App() {
       <NavBar /> {/* Navbar is always visible */}
       <Routes>
         <Route path="/" element={<Hero />} />
-        <Route path="/About" element={<About />} />
+        <Route path="/about" element={<About />} />
       </Routes>
     </Router>
   );

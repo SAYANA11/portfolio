@@ -1,0 +1,92 @@
+.add-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  padding: 20px;
+  background-color: #f9f9f9; /* Light background for better contrast */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  border-radius: 8px;
+}
+
+.add-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333; /* Darker text for better readability */
+  font-weight: bold;
+}
+
+.add-container input,
+.add-container textarea {
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  width: 100%;
+  max-width: 400px;
+  font-size: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for inputs */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.add-container input:focus,
+.add-container textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.5); /* Highlight on focus */
+  outline: none;
+}
+
+.add-container textarea {
+  resize: none;
+  height: 120px; /* Slightly taller for better usability */
+}
+
+.add-container input[type="file"] {
+  padding: 5px;
+  border: none;
+  background-color: transparent;
+  font-size: 0.9rem;
+}
+
+.add-container button {
+  padding: 12px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-container button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.add-container button:active {
+  transform: scale(0.98); /* Slight press effect on click */
+}
+
+.add-container input[type="file"] {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.add-container input[type="file"]::file-selector-button {
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-container input[type="file"]::file-selector-button:hover {
+  background-color: #0056b3;
+}

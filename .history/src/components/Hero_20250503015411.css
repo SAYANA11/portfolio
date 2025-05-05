@@ -1,0 +1,165 @@
+/* Import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+.hero-container {
+  padding: 20px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif; /* Apply Poppins font globally */
+}
+
+.name {
+  margin-bottom: 20px;
+}
+
+.photo img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.works-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.work-item {
+  width: 250px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.work-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.work-container {
+  padding: 10px;
+}
+
+.work-title {
+  margin: 10px 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2c3e50; /* Modern dark blue color */
+  text-align: center;
+  line-height: 1.4;
+  letter-spacing: 0.5px;
+  background: linear-gradient(135deg, #4facfe, #00f2fe); /* Neutral blue gradient */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.work-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px; /* Add border radius to the image */
+}
+
+/* Modal Styles */
+/* Modal Styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Darker background with shadow effect */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.5s ease-in-out;
+  z-index: 1000; /* Ensure the modal is above the navbar */
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  width: 90%;
+  max-width: 800px;
+  max-height: 80%;
+  overflow-y: auto;
+  animation: scaleUp 0.3s ease-in-out;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Modern shadow effect */
+  position: relative; /* To position the close button inside */
+}
+
+.modal-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.modal-description {
+  margin-bottom: 20px;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Grid Card Slider for Modal Images */
+.modal-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid */
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.modal-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for images */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.modal-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
+}
+
+/* Square Close Button Inside the Modal */
+.close-button {
+  position: absolute;
+  top: 15px; /* Position inside the white box */
+  right: 15px;
+  background: linear-gradient(135deg, #4facfe, #00f2fe); /* Neutral blue gradient */
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for a modern look */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.close-button:hover {
+  transform: scale(1.1); /* Slightly enlarge on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
+}
+
+.close-button:active {
+  transform: scale(0.95); /* Slightly shrink on click */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Reduce shadow on click */
+}

@@ -1,0 +1,42 @@
+.add-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+.add-container h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.add-container input,
+.add-container textarea {
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.add-container textarea {
+  resize: none;
+  height: 100px;
+}
+
+.add-container button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-container button:hover {
+  background-color: #0056b3;
+}

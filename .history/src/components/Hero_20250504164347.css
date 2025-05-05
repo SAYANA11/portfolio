@@ -1,0 +1,259 @@
+/* Import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* Hero Container */
+.hero-container {
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #ffffff, #f9f9f9); /* Light gradient background */
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  margin-top: 80px; /* Add spacing below the navbar */
+  color: #333; /* Dark text for contrast */
+}
+
+/* Name Section */
+.name {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2e7d32; /* Dark green for the title */
+  margin-bottom: 10px;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: #666; /* Softer gray for subtitle */
+}
+
+/* Photo Styling */
+.photo img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #2e7d32; /* Match dark green color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Works Header */
+.works-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.works-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #2e7d32; /* Dark green color */
+}
+
+.works-divider {
+  width: 50px;
+  height: 4px;
+  background-color: #2e7d32; /* Match dark green color */
+  border-radius: 2px;
+  margin: 10px auto;
+}
+
+/* Works List */
+.works-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.work-item {
+  flex: 0 1 calc(25% - 20px);
+  max-width: calc(25% - 20px);
+  background: #ffffff; /* Light card background */
+  border: 1px solid #ddd; /* Subtle border */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.work-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Styling */
+.work-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: filter 0.3s ease;
+}
+
+.work-item:hover .work-image {
+  filter: blur(5px);
+}
+
+/* Title Overlay */
+.work-title {
+  font-size: 1.2rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: #2e7d32; /* Dark green color */
+  margin: 10px 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 0.3s ease;
+}
+
+.work-item:hover .work-title {
+  opacity: 1;
+}
+
+/* Modal Styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.95); /* Light overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+  box-sizing: border-box;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modal-content {
+  background-color: #ffffff; /* Light modal background */
+  padding: 20px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  width: 100%;
+  max-width: 1200px;
+  max-height: 90%;
+  overflow-y: auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+/* Main Image Section */
+.modal-image-section {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.modal-large-image {
+  width: 100%; /* Full width of the container */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 700px; /* Constrain the maximum width */
+  max-height: 500px; /* Constrain the maximum height */
+  border-radius: 10px;
+
+  object-fit: contain; /* Ensure the entire image is visible without cropping */
+  transition: transform 0.3s ease;
+  margin: 0 auto; /* Center the image horizontally */
+}
+
+.modal-large-image:hover {
+  transform: scale(1.02);
+}
+
+/* Image Grid */
+.modal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid */
+  gap: 15px;
+}
+
+.modal-grid-item {
+  width: 100%;
+  height: 150px;
+  border-radius: 10px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.modal-grid-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.modal-grid-item.active {
+  border: 3px solid #2e7d32; /* Highlight active thumbnail with dark green */
+}
+
+/* Text Section */
+.modal-text-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  color: #333; /* Dark text for contrast */
+}
+
+.modal-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #2e7d32; /* Dark green color */
+}
+
+.modal-description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #666; /* Softer gray for description */
+}
+
+/* Close Button */
+.close-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #2e7d32; /* Dark green background */
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  width: 35px;
+  height: 35px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.close-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

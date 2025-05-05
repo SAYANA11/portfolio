@@ -1,0 +1,44 @@
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh; /* Full viewport height for vertical centering */
+    margin: 0 auto; /* Center horizontally */
+    padding: 20px;
+}
+
+.name h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.name p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.photo img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.photo img:hover {
+    transform: scale(1.1);
+}
+
+.works-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.works-list li {
+    margin: 5px 0;
+    font-size: 1rem;
+}

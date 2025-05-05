@@ -1,0 +1,238 @@
+/* Import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* Hero Container */
+.hero-container {
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #e8fce8, #ffffff); /* Soft green gradient */
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  margin-top: 80px; /* Add spacing below the navbar */
+}
+
+/* Name Section */
+.name {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* Photo Styling */
+.photo img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #98ff98; /* Match navbar color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Works Header */
+.works-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.works-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.works-divider {
+  width: 50px;
+  height: 4px;
+  background-color: #98ff98; /* Match navbar color */
+  border-radius: 2px;
+  margin: 10px auto;
+}
+
+/* Works List */
+.works-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.work-item {
+  flex: 0 1 calc(25% - 20px);
+  max-width: calc(25% - 20px);
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Ensure content stays within the container */
+  position: relative; /* To position the title overlay */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.work-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Styling */
+.work-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: filter 0.3s ease; /* Smooth transition for blur effect */
+}
+
+.work-item:hover .work-image {
+  filter: blur(5px); /* Blur the image on hover */
+}
+
+/* Title Overlay */
+.work-title {
+  font-size: 1.2rem;
+  font-family: 'Poppins', sans-serif; /* Use Poppins font */
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 10px 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0; /* Hide the title by default */
+  z-index: 1;
+  transition: opacity 0.3s ease; /* Smooth fade-in effect */
+}
+
+.work-item:hover .work-title {
+  opacity: 1; /* Show the title on hover */
+}
+
+/* Modal Styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Darker background with shadow effect */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure the modal is above the navbar */
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  width: 90%;
+  max-width: 600px;
+  max-height: 80%;
+  overflow-y: auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Modern shadow effect */
+  position: relative; /* To position the close button inside */
+}
+
+.modal-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.modal-description {
+  margin-bottom: 20px;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.modal-images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.modal-large-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for the large image */
+}
+
+.modal-small-images {
+  display: flex;
+  gap: 10px;
+}
+
+.modal-small-image {
+  width: 48%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for small images */
+}
+
+/* Close Button */
+.close-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: linear-gradient(135deg, #4facfe, #00f2fe); /* Neutral blue gradient */
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for a modern look */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.close-button:hover {
+  transform: scale(1.1); /* Slightly enlarge on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
+}
+
+.close-button:active {
+  transform: scale(0.95); /* Slightly shrink on click */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Reduce shadow on click */
+}
+
+/* Custom Scrollbar */
+.modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

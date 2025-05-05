@@ -1,0 +1,90 @@
+/* Skills Container */
+.skills-container {
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #e8fce8, #ffffff); /* Soft green gradient */
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Subtle shadow */
+  max-width: 1200px;
+  margin: 40px auto; /* Center the container */
+  font-family: 'Poppins', sans-serif;
+  color: #2c3e50;
+  text-align: center;
+}
+
+/* Title Styling */
+.skills-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #2c3e50;
+}
+
+/* Skills Grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+  gap: 20px;
+  justify-items: center;
+}
+
+/* Skill Card */
+.skill-card {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Skill Logo */
+.skill-logo {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+}
+
+/* Skill Name */
+.skill-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #4caf50; /* Accent color */
+}
+
+/* Skill Description */
+.skill-description {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .skills-title {
+    font-size: 2rem;
+  }
+
+  .skill-card {
+    padding: 15px;
+  }
+
+  .skill-logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  .skill-name {
+    font-size: 1.3rem;
+  }
+
+  .skill-description {
+    font-size: 0.9rem;
+  }
+}

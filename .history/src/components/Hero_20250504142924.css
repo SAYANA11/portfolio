@@ -1,0 +1,187 @@
+/* Import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* Hero Container */
+.hero-container {
+  padding: 60px 20px;
+  background: #d4c4b8; /* Neutral beige background */
+  color: #2c2c2c; /* Darker text for contrast */
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Name Section */
+.name {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #2c2c2c; /* Darker text for title */
+  margin-bottom: 10px;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #4a4a4a; /* Softer gray for subtitle */
+}
+
+/* Works Header */
+.works-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.works-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #2c2c2c;
+}
+
+.works-divider {
+  width: 60px;
+  height: 4px;
+  background-color: #2c2c2c;
+  margin: 15px auto;
+  border-radius: 2px;
+}
+
+/* Works List */
+.works-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* Work Item */
+.work-item {
+  background: #ffffff; /* White card background */
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.work-item:hover {
+  transform: translateY(-10px); /* Lift effect on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.work-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.work-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2c2c2c;
+  padding: 15px;
+  text-align: center;
+}
+
+/* Modal Styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Dark overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #ffffff; /* White modal background */
+  padding: 30px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 90%;
+  max-width: 1200px;
+  max-height: 80%;
+  overflow-y: auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.modal-large-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+}
+
+.modal-thumbnails {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.modal-thumbnail {
+  width: 80px;
+  height: 80px;
+  border-radius: 5px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.modal-thumbnail:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.modal-text {
+  text-align: left;
+  color: #2c2c2c;
+}
+
+.modal-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.modal-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #4a4a4a;
+}
+
+.close-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #2c2c2c;
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.close-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}

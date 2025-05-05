@@ -1,0 +1,72 @@
+/* Import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+.hero-container {
+  padding: 20px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif; /* Apply Poppins font globally */
+}
+
+.name {
+  margin-bottom: 20px;
+}
+
+.photo img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.works-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.work-item {
+  width: 250px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.work-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.work-container {
+  padding: 10px;
+}
+
+.work-title {
+  margin: 10px 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2c3e50; /* Modern dark blue color */
+  text-align: center;
+  line-height: 1.4;
+  letter-spacing: 0.5px;
+  background: linear-gradient(135deg, #4facfe, #00f2fe); /* Neutral blue gradient */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.work-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px; /* Add border radius to the image */
+}
+
+/* Modal Styles */

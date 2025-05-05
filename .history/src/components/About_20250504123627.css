@@ -1,0 +1,54 @@
+/* About Container */
+.about-container {
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #e8fce8, #ffffff); /* Soft green gradient */
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  max-width: 800px;
+  margin: 40px auto; /* Center the container */
+  font-family: 'Poppins', sans-serif;
+  color: #2c3e50;
+}
+
+/* Title Styling */
+.about-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Description Styling */
+.about-description {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+/* Details Section */
+.about-details {
+  margin-top: 20px;
+}
+
+.about-subtitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #4caf50; /* Accent color */
+}
+
+
+/* Contact Info */
+.contact-info {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #333;
+  background: #f9f9f9;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,162 @@
+/* Certificate Container */
+.certificate-container {
+  padding: 50px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.certificate-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2e7d32; /* Dark green */
+  margin-bottom: 20px;
+}
+
+/* Certificate Grid */
+.certificate-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.certificate-item {
+  flex: 0 1 calc(33.333% - 15px); /* 3 items per row on larger screens */
+  max-width: calc(33.333% - 15px);
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certificate-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.certificate-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px 10px 0 0;
+}
+
+.certificate-title {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+  padding: 10px;
+}
+
+/* See More Button */
+.see-more-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #2e7d32; /* Dark green */
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.see-more-button:hover {
+  background-color: #1b5e20; /* Darker green */
+  transform: scale(1.05);
+}
+
+/* Modal Styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Dark overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+  max-width: 500px;
+  width: 90%;
+}
+
+.modal-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.modal-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #ff5c5c;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.close-button:hover {
+  background: #ff3b3b;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .certificate-item {
+    flex: 0 1 calc(50% - 15px); /* 2 items per row on tablets */
+    max-width: calc(50% - 15px);
+  }
+
+  .certificate-title {
+    font-size: 0.9rem; /* Adjust title font size for smaller screens */
+  }
+
+  .see-more-button {
+    font-size: 0.9rem; /* Adjust button font size */
+    padding: 8px 16px; /* Smaller padding for buttons */
+  }
+}
+
+@media (max-width: 480px) {
+  .certificate-item {
+    flex: 0 1 calc(100% - 15px); /* 1 item per row on phones */
+    max-width: calc(100% - 15px);
+  }
+
+  .certificate-title {
+    font-size: 0.8rem; /* Smaller font size for very small screens */
+  }
+
+  .modal-content {
+    max-width: 90%; /* Ensure modal fits smaller screens */
+  }
+}

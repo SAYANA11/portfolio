@@ -165,36 +165,11 @@ const Hero = () => {
             <div className="modal-body">
               {/* Main Image Section */}
               <div className="modal-image-section">
-                <div className="modal-image-container">
-                  <img
-                    src={works[currentWorkIndex].images[currentImageIndex]}
-                    alt={works[currentWorkIndex].title}
-                    className="modal-large-image"
-                  />
-                  {/* Navigation Arrows */}
-                  <button 
-                    className="modal-nav-button prev"
-                    onClick={() => setCurrentImageIndex(prev => 
-                      prev === 0 ? works[currentWorkIndex].images.length - 1 : prev - 1
-                    )}
-                    disabled={works[currentWorkIndex].images.length <= 1}
-                  >
-                    ‹
-                  </button>
-                  <button 
-                    className="modal-nav-button next"
-                    onClick={() => setCurrentImageIndex(prev => 
-                      prev === works[currentWorkIndex].images.length - 1 ? 0 : prev + 1
-                    )}
-                    disabled={works[currentWorkIndex].images.length <= 1}
-                  >
-                    ›
-                  </button>
-                  {/* Swipe Indicator */}
-                  <div className="swipe-indicator">
-                    Swipe or use arrows to navigate
-                  </div>
-                </div>
+                <img
+                  src={works[currentWorkIndex].images[currentImageIndex]}
+                  alt={works[currentWorkIndex].title}
+                  className="modal-large-image"
+                />
                 <div className="modal-grid">
                   {works[currentWorkIndex].images.map((image, idx) => (
                     <img
@@ -204,7 +179,7 @@ const Hero = () => {
                       className={`modal-grid-item ${
                         idx === currentImageIndex ? "active" : ""
                       }`}
-                      onClick={() => setCurrentImageIndex(idx)}
+                      onClick={() => setCurrentImageIndex(idx)} // Only update the image index
                     />
                   ))}
                 </div>

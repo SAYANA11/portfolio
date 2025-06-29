@@ -269,7 +269,7 @@
       }
 
       .modal-content {
-        background: var(--gradient-card);
+        background: linear-gradient(145deg, #ffffff, #f8f9fa);
         padding: 40px;
         border-radius: 24px;
         display: flex;
@@ -279,10 +279,10 @@
         max-width: 1000px;
         max-height: 90vh;
         overflow-y: auto;
-        box-shadow: 0 20px 80px var(--shadow-heavy);
+        box-shadow: 0 20px 80px rgba(0, 0, 0, 0.3);
         position: relative;
         animation: modalSlideIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        border: 1px solid var(--border-color);
+        border: 1px solid rgba(255, 255, 255, 0.2);
       }
 
       @keyframes modalSlideIn {
@@ -302,7 +302,7 @@
       }
 
       .modal-content::-webkit-scrollbar-track {
-        background: var(--card-background);
+        background: #f1f1f1;
         border-radius: 4px;
       }
 
@@ -320,160 +320,66 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 20px;
-        position: relative;
-      }
-
-      /* Image Container with Navigation */
-      .modal-image-container {
-        position: relative;
-        width: 100%;
-        max-width: 700px;
-        border-radius: 20px;
-        overflow: hidden;
-        background: rgba(46, 125, 50, 0.05);
-        padding: 15px;
-        border: 1px solid rgba(46, 125, 50, 0.2);
+        gap: 25px;
       }
 
       .modal-large-image {
         width: 100%;
+        max-width: 700px;
         height: auto;
         max-height: 500px;
         border-radius: 16px;
-        box-shadow: 0 12px 48px var(--shadow-medium);
+        box-shadow: 0 12px 48px rgba(0, 0, 0, 0.15);
         object-fit: contain;
-        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        border: 2px solid rgba(46, 125, 50, 0.3);
-        display: block;
-      }
-
-      /* Image Navigation Arrows */
-      .modal-nav-button {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background: rgba(46, 125, 50, 0.9);
-        color: white;
-        border: none;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        font-size: 1.5rem;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: all 0.3s ease;
-        z-index: 10;
-        backdrop-filter: blur(10px);
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-      }
-
-      .modal-nav-button:hover {
-        background: var(--primary-green);
-        transform: translateY(-50%) scale(1.1);
-        box-shadow: 0 6px 30px rgba(46, 125, 50, 0.4);
-      }
-
-      .modal-nav-button.prev {
-        left: 15px;
-      }
-
-      .modal-nav-button.next {
-        right: 15px;
-      }
-
-      .modal-nav-button:disabled {
-        opacity: 0.3;
-        cursor: not-allowed;
-        transform: translateY(-50%) scale(0.9);
+        transition: transform 0.3s ease;
+        border: 2px solid rgba(46, 125, 50, 0.1);
       }
 
       .modal-large-image:hover {
         transform: scale(1.02);
-        box-shadow: 0 16px 64px var(--shadow-heavy);
+        box-shadow: 0 16px 64px rgba(0, 0, 0, 0.2);
       }
 
       /* Thumbnail Grid */
       .modal-grid {
         display: flex;
-        gap: 10px;
-        justify-content: flex-start;
-        padding: 12px;
-        background: rgba(46, 125, 50, 0.08);
-        border-radius: 20px;
+        gap: 12px;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 10px;
+        background: rgba(46, 125, 50, 0.05);
+        border-radius: 12px;
         max-width: 100%;
         overflow-x: auto;
-        border: 1px solid rgba(46, 125, 50, 0.15);
-        scrollbar-width: thin;
-        scrollbar-color: var(--primary-green) transparent;
-      }
-
-      .modal-grid::-webkit-scrollbar {
-        height: 6px;
-      }
-
-      .modal-grid::-webkit-scrollbar-track {
-        background: rgba(46, 125, 50, 0.1);
-        border-radius: 3px;
-      }
-
-      .modal-grid::-webkit-scrollbar-thumb {
-        background: var(--primary-green);
-        border-radius: 3px;
       }
 
       .modal-grid-item {
-        width: 75px;
-        height: 75px;
+        width: 80px;
+        height: 80px;
         border-radius: 12px;
         object-fit: cover;
         cursor: pointer;
-        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         border: 2px solid transparent;
         flex-shrink: 0;
-        position: relative;
-        overflow: hidden;
-      }
-
-      .modal-grid-item::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: var(--gradient-primary);
-        opacity: 0;
-        transition: opacity 0.3s ease;
-        border-radius: 10px;
       }
 
       .modal-grid-item:hover {
-        transform: scale(1.15) translateY(-3px);
-        box-shadow: 0 8px 28px rgba(0, 0, 0, 0.25);
-      }
-
-      .modal-grid-item:hover::before {
-        opacity: 0.1;
+        transform: scale(1.1) translateY(-2px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
       }
 
       .modal-grid-item.active {
         border-color: var(--primary-green);
-        box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.3), 0 8px 32px rgba(46, 125, 50, 0.2);
-        transform: scale(1.1);
-      }
-
-      .modal-grid-item.active::before {
-        opacity: 0.15;
+        box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.2);
+        transform: scale(1.05);
       }
 
       /* Text Section */
       .modal-text-section {
         text-align: left;
-        color: var(--text-light);
+        color: var(--text-dark);
         margin-top: 10px;
       }
 
@@ -491,7 +397,7 @@
       .modal-description {
         font-size: 1.1rem;
         line-height: 1.8;
-        color: #bbb;
+        color: var(--text-muted);
         white-space: pre-line;
         text-align: justify;
         font-weight: 400;
@@ -534,205 +440,6 @@
         to {
           opacity: 1;
           transform: translateY(0);
-        }
-      }
-
-      /* Touch and Mobile Optimizations */
-      .modal-image-container {
-        touch-action: pan-y;
-        user-select: none;
-        -webkit-user-select: none;
-        -webkit-touch-callout: none;
-      }
-
-      /* Swipe Indicator */
-      .swipe-indicator {
-        position: absolute;
-        bottom: 10px;
-        left: 50%;
-        transform: translateX(-50%);
-        background: rgba(0, 0, 0, 0.6);
-        color: white;
-        padding: 8px 16px;
-        border-radius: 20px;
-        font-size: 0.85rem;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-        pointer-events: none;
-        backdrop-filter: blur(10px);
-      }
-
-      .swipe-indicator.show {
-        opacity: 1;
-      }
-
-      /* Modal Responsive Design */
-      @media (max-width: 768px) {
-        .modal-content {
-          padding: 20px;
-          margin: 5px;
-          max-width: calc(100vw - 10px);
-          max-height: calc(100vh - 10px);
-          border-radius: 20px;
-          gap: 20px;
-        }
-
-        .modal-image-container {
-          padding: 10px;
-          border-radius: 16px;
-        }
-
-        .modal-large-image {
-          max-height: 350px;
-          border-radius: 12px;
-        }
-
-        .modal-nav-button {
-          width: 44px;
-          height: 44px;
-          font-size: 1.3rem;
-        }
-
-        .modal-nav-button.prev {
-          left: 10px;
-        }
-
-        .modal-nav-button.next {
-          right: 10px;
-        }
-
-        .modal-grid {
-          padding: 8px;
-          gap: 6px;
-          border-radius: 16px;
-          justify-content: flex-start;
-        }
-
-        .modal-grid-item {
-          width: 55px;
-          height: 55px;
-          border-radius: 10px;
-          min-width: 55px;
-        }
-
-        .modal-title {
-          font-size: 1.5rem;
-          margin-bottom: 12px;
-          line-height: 1.3;
-        }
-
-        .modal-description {
-          font-size: 0.95rem;
-          line-height: 1.7;
-        }
-
-        .close-button {
-          width: 40px;
-          height: 40px;
-          font-size: 1.3rem;
-          top: 12px;
-          right: 12px;
-        }
-
-        .modal-image-section {
-          gap: 15px;
-        }
-
-        /* Touch-friendly spacing */
-        .modal-text-section {
-          margin-top: 5px;
-        }
-      }
-
-      @media (max-width: 480px) {
-        .modal-content {
-          padding: 15px;
-          gap: 15px;
-          border-radius: 16px;
-        }
-
-        .modal-image-container {
-          padding: 8px;
-        }
-
-        .modal-large-image {
-          max-height: 280px;
-          border-radius: 10px;
-        }
-
-        .modal-nav-button {
-          width: 38px;
-          height: 38px;
-          font-size: 1.1rem;
-        }
-
-        .modal-nav-button.prev {
-          left: 8px;
-        }
-
-        .modal-nav-button.next {
-          right: 8px;
-        }
-
-        .modal-grid {
-          padding: 6px;
-          gap: 4px;
-        }
-
-        .modal-grid-item {
-          width: 45px;
-          height: 45px;
-          border-radius: 8px;
-          min-width: 45px;
-        }
-
-        .modal-title {
-          font-size: 1.3rem;
-          margin-bottom: 10px;
-        }
-
-        .modal-description {
-          font-size: 0.85rem;
-          text-align: left;
-          line-height: 1.6;
-        }
-
-        .close-button {
-          width: 36px;
-          height: 36px;
-          font-size: 1.1rem;
-          top: 10px;
-          right: 10px;
-        }
-      }
-
-      /* Enhanced Modal Body Layout */
-      .modal-body {
-        display: flex;
-        flex-direction: column;
-        gap: 25px;
-      }
-
-      @media (min-width: 1024px) {
-        .modal-body {
-          flex-direction: row;
-          align-items: flex-start;
-          gap: 40px;
-        }
-
-        .modal-image-section {
-          flex: 1.2;
-          min-width: 0;
-        }
-
-        .modal-text-section {
-          flex: 0.8;
-          min-width: 300px;
-          margin-top: 0;
-        }
-
-        .modal-large-image {
-          max-width: 100%;
         }
       }
 

@@ -158,33 +158,33 @@ const Hero = () => {
       {/* Modal Section */}
       {isModalOpen && (
         <div className="modal">
-          <div className="modal-content new-modal-layout">
+          <div className="modal-content new-modal-layout larger-modal">
             {/* Modal Header */}
             <button className="close-button cube" onClick={closeModal}>
               <span className="close-icon">&times;</span>
             </button>
             <div className="modal-body vertical-modal-body">
-              <div className="modal-gallery">
+              <div className="scrollable-content-with-image">
                 <img
                   src={works[currentWorkIndex].images[currentImageIndex]}
                   alt={works[currentWorkIndex].title}
                   className="modal-large-image"
                 />
-                <div className="modal-thumbnails">
-                  {works[currentWorkIndex].images.map((image, idx) => (
-                    <img
-                      key={idx}
-                      src={image}
-                      alt={`Image ${idx + 1}`}
-                      className={`modal-thumbnail ${idx === currentImageIndex ? "active" : ""}`}
-                      onClick={() => setCurrentImageIndex(idx)}
-                    />
-                  ))}
+                <div className="modal-description-section">
+                  <h4 className="modal-title">{works[currentWorkIndex].title}</h4>
+                  <p className="modal-description">{works[currentWorkIndex].description}</p>
                 </div>
               </div>
-              <div className="modal-description-section scrollable-description">
-                <h4 className="modal-title">{works[currentWorkIndex].title}</h4>
-                <p className="modal-description">{works[currentWorkIndex].description}</p>
+              <div className="modal-thumbnails">
+                {works[currentWorkIndex].images.map((image, idx) => (
+                  <img
+                    key={idx}
+                    src={image}
+                    alt={`Image ${idx + 1}`}
+                    className={`modal-thumbnail ${idx === currentImageIndex ? "active" : ""}`}
+                    onClick={() => setCurrentImageIndex(idx)}
+                  />
+                ))}
               </div>
             </div>
           </div>

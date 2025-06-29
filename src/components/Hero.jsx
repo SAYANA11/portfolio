@@ -160,11 +160,10 @@ const Hero = () => {
         <div className="modal">
           <div className="modal-content new-modal-layout">
             {/* Modal Header */}
-            <button className="close-button" onClick={closeModal}>
-              &times;
+            <button className="close-button cube" onClick={closeModal}>
+              <span className="close-icon">&times;</span>
             </button>
-            <div className="modal-body new-modal-body">
-              {/* Left: Image Gallery */}
+            <div className="modal-body vertical-modal-body">
               <div className="modal-gallery">
                 <img
                   src={works[currentWorkIndex].images[currentImageIndex]}
@@ -183,8 +182,7 @@ const Hero = () => {
                   ))}
                 </div>
               </div>
-              {/* Right: Description */}
-              <div className="modal-description-section">
+              <div className="modal-description-section scrollable-description">
                 <h4 className="modal-title">{works[currentWorkIndex].title}</h4>
                 <p className="modal-description">{works[currentWorkIndex].description}</p>
               </div>

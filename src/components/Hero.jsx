@@ -159,17 +159,42 @@ const Hero = () => {
             {isModalOpen && (
         <div className="modal">
           <div className="modal-content">
-            <button className="close-button" onClick={closeModal}>
-              &times;
-            </button>
+            {/* Modal Header */}
+            <div className="modal-header">
+              <h4 className="modal-title">{works[currentWorkIndex].title}</h4>
+              <button className="close-button" onClick={closeModal}>
+                ×
+              </button>
+            </div>
             <div className="modal-body">
               {/* Main Image Section */}
-              <div className="modal-image-section">
-                <img
-                  src={works[currentWorkIndex].images[currentImageIndex]}
-                  alt={works[currentWorkIndex].title}
-                  className="modal-large-image"
-                />
+              <div className="modal-image-section modal-content-section">
+                <div className="modal-image-container">
+                  <img
+                    src={works[currentWorkIndex].images[currentImageIndex]}
+                    alt={works[currentWorkIndex].title}
+                    className="modal-large-image"
+                  />
+                  {/* Navigation Arrows */}
+                  <button 
+                    className="modal-nav-button prev"
+                    onClick={() => setCurrentImageIndex(prev => 
+                      prev === 0 ? works[currentWorkIndex].images.length - 1 : prev - 1
+                    )}
+                    disabled={works[currentWorkIndex].images.length <= 1}
+                  >
+                    ‹
+                  </button>
+                  <button 
+                    className="modal-nav-button next"
+                    onClick={() => setCurrentImageIndex(prev => 
+                      prev === works[currentWorkIndex].images.length - 1 ? 0 : prev + 1
+                    )}
+                    disabled={works[currentWorkIndex].images.length <= 1}
+                  >
+                    ›
+                  </button>
+                </div>
                 <div className="modal-grid">
                   {works[currentWorkIndex].images.map((image, idx) => (
                     <img
@@ -179,16 +204,16 @@ const Hero = () => {
                       className={`modal-grid-item ${
                         idx === currentImageIndex ? "active" : ""
                       }`}
-                      onClick={() => setCurrentImageIndex(idx)} // Only update the image index
+                      onClick={() => setCurrentImageIndex(idx)}
                     />
                   ))}
                 </div>
               </div>
       
               {/* Text Section */}
-              <div className="modal-text-section">
-                <h4 className="modal-title">{works[currentWorkIndex].title}</h4>
-                <p className="modal-description">{works[currentWorkIndex].description}</p>
+              <div className="modal-text-section modal-content-section">
+                <h5 className="modal-description-title">Experience Details</h5>
+                <div className="modal-description">{works[currentWorkIndex].description}</div>
               </div>
             </div>
           </div>

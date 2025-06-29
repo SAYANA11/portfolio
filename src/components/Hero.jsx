@@ -156,43 +156,36 @@ const Hero = () => {
       </ul>
 
       {/* Modal Section */}
-            {isModalOpen && (
+      {isModalOpen && (
         <div className="modal">
-          <div className="modal-content">
+          <div className="modal-content new-modal-layout">
             {/* Modal Header */}
-            <div className="modal-header">
-              <h4 className="modal-title">{works[currentWorkIndex].title}</h4>
-              <button className="close-button" onClick={closeModal}>
-                &times;
-              </button>
-            </div>
-            
-            {/* Modal Body */}
-            <div className="modal-body">
-              {/* Main Image Section */}
-              <div className="modal-image-section">
+            <button className="close-button" onClick={closeModal}>
+              &times;
+            </button>
+            <div className="modal-body new-modal-body">
+              {/* Left: Image Gallery */}
+              <div className="modal-gallery">
                 <img
                   src={works[currentWorkIndex].images[currentImageIndex]}
                   alt={works[currentWorkIndex].title}
                   className="modal-large-image"
                 />
-                <div className="modal-grid">
+                <div className="modal-thumbnails">
                   {works[currentWorkIndex].images.map((image, idx) => (
                     <img
                       key={idx}
                       src={image}
                       alt={`Image ${idx + 1}`}
-                      className={`modal-grid-item ${
-                        idx === currentImageIndex ? "active" : ""
-                      }`}
+                      className={`modal-thumbnail ${idx === currentImageIndex ? "active" : ""}`}
                       onClick={() => setCurrentImageIndex(idx)}
                     />
                   ))}
                 </div>
               </div>
-      
-              {/* Text Section */}
-              <div className="modal-text-section">
+              {/* Right: Description */}
+              <div className="modal-description-section">
+                <h4 className="modal-title">{works[currentWorkIndex].title}</h4>
                 <p className="modal-description">{works[currentWorkIndex].description}</p>
               </div>
             </div>

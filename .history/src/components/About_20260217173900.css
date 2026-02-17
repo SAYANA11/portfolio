@@ -1,0 +1,126 @@
+/* About Container */
+.about-container {
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #e8fce8, #ffffff); /* Soft green gradient */
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Enhanced shadow for depth */
+  max-width: 800px;
+  margin: 120px auto; /* Center the container with top margin */
+  font-family: 'Poppins', sans-serif;
+  color: #2c3e50;
+  text-align: center; /* Center-align all text */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-container:hover {
+  transform: scale(1.02); /* Slight zoom effect on hover */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Title Styling */
+.about-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  background: linear-gradient(135deg, #4caf50, #2c3e50); /* Gradient text */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Description Styling */
+.about-description {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  color: #333;
+  padding: 0 20px; /* Add padding for better readability */
+  letter-spacing: 0.5px;
+}
+
+/* Details Section */
+.about-details {
+  margin-top: 30px;
+  text-align: left; /* Align details to the left */
+}
+
+/* Subtitle Styling */
+.about-subtitle {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #4caf50; /* Accent color */
+  text-align: center; /* Center-align subtitles */
+  text-transform: uppercase; /* Add uppercase styling */
+}
+
+/* Skills List */
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.skills-list li {
+  background: #4caf50; /* Green background for skills */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skills-list li:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Contact Info */
+.contact-info {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #333;
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-info:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-container {
+    padding: 30px 15px;
+    margin: 60px auto; /* Adjust margin for smaller screens */
+  }
+
+  .about-title {
+    font-size: 2.2rem;
+  }
+
+  .about-description {
+    font-size: 1rem;
+  }
+
+  .skills-list li {
+    font-size: 0.9rem;
+    padding: 8px 15px;
+  }
+
+  .contact-info {
+    font-size: 1rem;
+    padding: 10px;
+  }
+}
